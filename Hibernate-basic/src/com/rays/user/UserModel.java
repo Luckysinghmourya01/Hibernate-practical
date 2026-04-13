@@ -161,28 +161,63 @@ public class UserModel {
 			if (dto.getFirstName() != null && dto.getFirstName().length() > 0) {
 				criteria.add(Restrictions.like("firstName", dto.getFirstName() + "%"));
 			}
-			if(dto.getLastName() != null && dto.getLastName().length() >0) {
+			if (dto.getLastName() != null && dto.getLastName().length() > 0) {
 				criteria.add(Restrictions.like("lastName", dto.getLastName() + "%"));
 			}
-			if(dto.getPassword() != null && dto.getPassword().length() >0) {
-				criteria.add(Restrictions.eq("password", dto.getPassword() ));
+			if (dto.getPassword() != null && dto.getPassword().length() > 0) {
+				criteria.add(Restrictions.eq("password", dto.getPassword()));
 			}
-			if(dto.getLoginId() != null && dto.getLoginId().length() >0) {
-				criteria.add(Restrictions.like("loginId", dto.getLoginId()  ));
+			if (dto.getLoginId() != null && dto.getLoginId().length() > 0) {
+				criteria.add(Restrictions.like("loginId", dto.getLoginId()));
 			}
 		}
-		
-		if(pageNo > 0) {
+
+		if (pageNo > 0) {
 			pageNo = (pageNo - 1) * pageSize;
 			criteria.setFirstResult(pageNo);
 			criteria.setMaxResults(pageSize);
-			
-		list = 	criteria.list();
-		
-		
+
+			list = criteria.list();
+
 		}
-		
+
 		return list;
 
 	}
+	
+	public UserDTO findByPk(int id) {
+		
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		
+		Session session = sf.openSession();
+		
+		  UserDTO dto = (UserDTO)    session.get(UserDTO.class, id );
+		  
+		  session.close();
+		  
+		  return dto;
+	}
+
+//	public UserDTO findByPk1(int id) {
+//		
+//		UserDTO dto = null;
+//		
+//		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+//		
+//	Session session = 	sf.openSession();
+//	
+//	Criteria criteria =  session.createCriteria(UserDTO.class);
+//	
+//	criteria.add(Restrictions.eq("id", id));
+//	
+//	  List<UserDTO> list =   criteria.list();
+//	  
+//	  if(list.size() == 1) {
+//		  dto = new UserDTO();
+//		dto =   list.get(0);
+//	  }
+//	  
+//	  return dto;
+//	}
+	
 }

@@ -18,29 +18,46 @@ public class TestUserModel {
 		// testAuthenticate1();
 		// testUpdate();
 		// TestDelete();
-		testSearch();
+		// testSearch();
+		testFindBypk();
+	}
+
+	private static void testFindBypk() {
+
+ 		UserDTO dto = new UserDTO();
+		UserModel model = new UserModel();
+
+		dto = model.findByPk(2);
+
+		System.out.print("\t" + dto.getId());
+		System.out.print("\t" + dto.getFirstName());  
+		System.out.print("\t" + dto.getLastName());
+		System.out.print("\t" + dto.getLoginId());
+		System.out.print("\t" + dto.getAddress());
+		System.out.println("\t" + dto.getDob());
+
 	}
 
 	private static void testSearch() {
 
 		UserDTO dto = new UserDTO();
 		UserModel model = new UserModel();
-		
-           dto.setLastName("s");
+
+		dto.setLastName("s");
 		List<UserDTO> list = model.search(dto, 1, 10);
 
 		Iterator<UserDTO> it = list.iterator();
 		while (it.hasNext()) {
 
 			dto = it.next();
-			
+
 			System.out.print("\t" + dto.getId());
 			System.out.print("\t" + dto.getFirstName());
 			System.out.print("\t" + dto.getLastName());
 			System.out.print("\t" + dto.getLoginId());
 			System.out.print("\t" + dto.getAddress());
 			System.out.println("\t" + dto.getDob());
-			
+
 		}
 
 	}
