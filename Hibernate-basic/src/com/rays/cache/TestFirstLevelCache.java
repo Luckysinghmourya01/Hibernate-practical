@@ -28,7 +28,7 @@ public class TestFirstLevelCache {
 		System.out.print("\t" + dto.getDob());
 		System.out.println("\t" + dto.getAddress());
 
-		session.evict(dto); //evict method clear the object from firstLevel cache mean data ko 
+		//session.evict(dto); //evict method clear the object from firstLevel cache mean data ko clear krti h
 
 		
 		
