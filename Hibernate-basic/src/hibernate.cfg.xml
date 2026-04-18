@@ -20,8 +20,8 @@
 
 		<mapping resource="com/rays/user/UserDTO.hbm.xml" />
 		<mapping resource="com/rays/user/MarksheetDTO.hbm.xml" />
-		<mapping resource="com/rays/auction/bid.hbm.xml" />
-		<mapping resource="com/rays/auction/AuctionItem.hbm.xml " />
+		<!-- <mapping resource="com/rays/auction/bid.hbm.xml" />
+		<mapping resource="com/rays/auction/AuctionItem.hbm.xml " /> -->
 	</session-factory>
 </hibernate-configuration>
 	

@@ -36,7 +36,7 @@ public class TestAuction {
 
 		AuctionItem item = new AuctionItem();
 
-		item.setId(2);
+		item.setId(2 );
 		item.setDescription("auction 2");
 		item.setBids(bids);
 
