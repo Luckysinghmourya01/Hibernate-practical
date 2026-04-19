@@ -30,7 +30,7 @@ public class TestHqlCount {
      
      while(it.hasNext()) {
     	 
-    	Object dto =  it.next();
+    	Object dto =  it.next(); 
     	
     	System.out.println(dto);
      }

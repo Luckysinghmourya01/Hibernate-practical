@@ -34,7 +34,7 @@ public class TestHqlColumn {
 		
 		System.out.print(dto[0]);
 		//System.out.print("\t");
-		System.out.print("\t"+dto[1]);
+		System.out.println("\t"+dto[1]);
 		
 	}
 	}
