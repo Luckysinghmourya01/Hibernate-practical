@@ -12,14 +12,14 @@ public class TestUserModel {
 
 	public static void main(String[] args) throws ParseException, DublicateRecordException {
 
-		// testAdd();
+	 testAdd();
 		// testFindByLogin();
 		// testAuthenticate();
 		// testAuthenticate1();
 		// testUpdate();
 		// TestDelete();
 		// testSearch();
-		testFindBypk();
+		//testFindBypk();
 	}
 
 	private static void testFindBypk() {

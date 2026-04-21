@@ -6,7 +6,7 @@
 	<session-factory>
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		<property name="hibernate.connection.password">root</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_basic</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate-basic</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
@@ -22,6 +22,9 @@
 		<mapping resource="com/rays/user/MarksheetDTO.hbm.xml" />
 		<!-- <mapping resource="com/rays/auction/bid.hbm.xml" />
 		<mapping resource="com/rays/auction/AuctionItem.hbm.xml " /> -->
+		
+		<!-- <mapping resource="com/rays/oneone/Address.hbm.xml"/>
+		<mapping resource="com/rays/oneone/Employe.hbm.xml"/> -->
 	</session-factory>
 </hibernate-configuration>
 	
