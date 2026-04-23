@@ -18,13 +18,14 @@
 		<property name="hibernate.cache.use_second_level_cache">true</property>
 		<property name="hibernate.cache.use_query_cache">true</property>
 
-		<mapping resource="com/rays/user/UserDTO.hbm.xml" />
-		<mapping resource="com/rays/user/MarksheetDTO.hbm.xml" />
-		<!-- <mapping resource="com/rays/auction/bid.hbm.xml" />
-		<mapping resource="com/rays/auction/AuctionItem.hbm.xml " /> -->
-		
-		<!-- <mapping resource="com/rays/oneone/Address.hbm.xml"/>
-		<mapping resource="com/rays/oneone/Employe.hbm.xml"/> -->
+
+		<mapping resource="com/rays/inheritance/Payment.hbm.xml" />
+		<!-- <mapping resource="com/rays/user/UserDTO.hbm.xml" /> -->
+		<!-- <mapping resource="com/rays/user/MarksheetDTO.hbm.xml" /> -->
+		<!-- <mapping resource="com/rays/auction/bid.hbm.xml" /> <mapping resource="com/rays/auction/AuctionItem.hbm.xml 
+			" /> -->
+
+		<!-- <mapping resource="com/rays/oneone/Address.hbm.xml"/> <mapping resource="com/rays/oneone/Employe.hbm.xml"/> -->
 	</session-factory>
 </hibernate-configuration>
 	

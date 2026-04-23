@@ -14,9 +14,9 @@ public class TestGetLoad {
 
 		Session session = sf.openSession();
 		
-	//	UserDTO dto = (UserDTO) session.load(UserDTO.class, 9);
+		UserDTO dto = (UserDTO) session.load(UserDTO.class, 12);
 		
-	UserDTO dto = (UserDTO)	session.get(UserDTO.class, 11);
+	//UserDTO dto = (UserDTO)	session.get(UserDTO.class, 13);
 	
 
 	

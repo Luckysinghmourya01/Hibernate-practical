@@ -28,10 +28,12 @@ public class TestSavePersist {
 
 		Transaction tx = session.beginTransaction();
 
-		 int i = (int) session.save(dto);
-
-		 System.out.println("i =" + i);
-	//	session.persist(dto);
+		/*
+		 * int i = (int) session.save(dto);
+		 * 
+		 * System.out.println("i =" + i);
+		 */
+		session.persist(dto);
 
 		tx.commit();
 
