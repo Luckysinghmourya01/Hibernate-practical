@@ -14,7 +14,7 @@ public class TestSave {
 		
 		UserDTO dto = new UserDTO();
 		
-		dto.setFirstName("vimal");
+		dto.setFirstName("lucky");
 		dto.setLastName("kumar");
 		dto.setLoginId("kamal11@gmail.com");
 		dto.setPassword("Aman@121");
