@@ -6,14 +6,14 @@
 	<class name="com.rays.auction.AuctionItem" table="AUCTIONITEM">
 		<id name="id" type="int">
 			<column name="ID" />
-			<generator class="assigned " />
+			<generator class="assigned" />
 		</id>
 
 		<property name="description" type="java.lang.String">
 			<column name="DESCRIPTION" />
 		</property>
 
-		<set name="bids" table="AUCTIONITEM" cascade="all" lazy="true">
+		<set name="bids" table="AUCTIONITEM" cascade="all" fetch="join">
 			<key>
 				<column name="Item_id" />
 			</key>
